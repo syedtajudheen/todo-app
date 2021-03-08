@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+  background-color: #eeeeee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container {
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  width: 50%;
+
+  h1 {
+    color: #545454;
+  }
+
+  section {
+    margin: 0 16px 10px 16px;
+    display: grid;
+
+    input[type="text" i] {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 0;
+      border: 1px solid #e0e0e0;
+
+      &:focus {
+        outline: none !important;
+        border: 1px solid #719ece;
+        box-shadow: 0 0 4px #719ece;
+      }
+    }
+
+    .todo-item {
+      display: flex;
+      padding: 6px 0;
+      border-bottom: 1px solid #e3e3e3;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  .footer {
+    background-color: #f5fcea;
+    bottom: 0;
+    border-top: 1px solid #e3e3e3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+
+    .action-items {
+      align-items: center;
+      display: flex;
+
+      > * {
+        margin: 0 6px;
+      }
+      span.todo-counts {
+        font-size: 14px;
+        font-weight: 500;
+        color: #93968c;
+      }
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.vertical-divder {
+  border-left: 1px solid #b7b7b7;
+  height: 100%;
+  display: inline;
+  padding: 12px 0;
+}
+
+.visibility-filters {
+  display: flex;
+  align-items: center;
+  & > * {
+    margin: 0 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #93968c;
+  }
+  span {
+    cursor: pointer;
+    &.active {
+      color: #333333;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+  }
+}
